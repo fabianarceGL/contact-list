@@ -13,8 +13,11 @@
     <div class="footerContainer">
       <div 
         class="contactDelete"
-        (click)="deleteContact(contact.id)"> <i class="far fa-trash-alt"></i> DELETE THE CONTACT</div>
-      <i class="far fa-arrow-alt-circle-right contactArrow" style="color: #0A678C"></i>
+        (click)="deleteContact(contact.id)"> 
+          <i class="far fa-trash-alt"></i> 
+          DELETE THE CONTACT
+      </div>
+      <i [routerLink]="[ '/contacts', contact.id ]" class="far fa-arrow-alt-circle-right contactArrow"></i>
     </div>
   </div>
 </div>

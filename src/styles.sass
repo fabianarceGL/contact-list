@@ -2,3 +2,28 @@
 body
     background-color: #39A383
     font-family: 'Open Sans', sans-serif
+
+.btn
+    border: none
+    height: 40px
+    width: 150px
+    color: white
+    font-size: 15px
+    box-shadow: -6px 6px 15px -5px #000000
+    cursor: pointer
+    &:hover
+        opacity: 0.9
+    &:focus
+        outline: 0
+
+$buttonPrimaryColor: #0A658E
+.btn.primary
+    background-color: $buttonPrimaryColor
+    &:active
+        background-color: darken($buttonPrimaryColor, 10%)
+
+$buttonSecondaryColor: #959595
+.btn.secondary
+    background-color: $buttonSecondaryColor
+    &:active
+        background-color: darken($buttonSecondaryColor, 10%)

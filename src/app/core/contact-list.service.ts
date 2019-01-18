@@ -34,7 +34,8 @@ export class ContactListService {
   };
 
   getContact(id: number) {
-    return this.http.get<Contact>(`${this.url}/${id}`);
+    return this.http.get<Contact>(`${this.url}/${id}`).pipe(
+      catchError(error => { throw error }));;
   }
 
   createContact(contact: Contact) {

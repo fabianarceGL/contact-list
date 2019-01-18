@@ -2,18 +2,19 @@
     display: flex
     box-shadow: -6px 6px 15px -5px #000000
     margin: 20px
+    width: 290px
 
 .leftSection
-    flex-grow: 0.2
+    text-align: center
+    width: 10%
     background-color: #28725C
     color: white
-    padding: 10px
 
 .rightSection
-    flex-grow: 0.8
+    width: 90%    
     background-color: #F3F3F3
     color: black
-    padding: 20px 100px 20px 5px
+    padding: 10px
 
 .contactData
     display: flex
@@ -25,9 +26,18 @@
     font-size: 12px
     cursor: pointer
 
+$arrowButtonColor: #0A678C
+
 .contactArrow
     position: relative
-    left: 50%
+    color: $arrowButtonColor
+    cursor: pointer
+    &:hover
+        opacity: 0.9
+    &:focus
+        outline: 0
+    &:active
+        color: darken($arrowButtonColor, 10%)
 
 .footerContainer
     align-items: center

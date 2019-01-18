@@ -1,0 +1,49 @@
+.formContainer
+    display: flex
+    flex-direction: column
+    width: 100%
+
+.formGroup
+    width: 70%
+    color: white
+    position: relative
+    margin: 15px
+    label
+        display: block
+        margin: 5px 0px
+        font-weight: bold
+
+.formGroup.buttons
+    left: 30px
+    display: flex
+    justify-content: flex-end
+    button
+        margin: 10px
+
+input
+    display: block
+    width: 100%
+    text-align: left
+    padding: 20px 0px 20px 20px
+    color: grey
+    font-style: italic
+    font-size: 15px
+    font-weight: 100
+    border: none
+    &:focus
+        outline: 0
+
+$errorColor: #f76a6a
+
+input.ng-invalid.ng-touched
+    border: 1px solid $errorColor
+
+.errorMessage
+    color: $errorColor
+    font-style: italic
+    font-size: 20px
+
+button:disabled
+  cursor: default
+  opacity: 0.5
+      

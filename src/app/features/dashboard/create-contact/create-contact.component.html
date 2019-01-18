@@ -1,0 +1,74 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+	<div class="formContainer">
+
+		<div class="formGroup">
+			<label for="name">NAME:</label>
+			<input
+				type="text"
+				class="form-control"
+				formControlName="name"
+				placeholder="Type your first name">
+			<span
+				*ngIf="contactForm.get('name').invalid && contactForm.get('name').touched" 
+				class="errorMessage">
+				This first name is required
+			</span>
+		</div>
+
+		<div class="formGroup">
+			<label for="lastName">LAST NAME:</label>
+			<input
+				type="text"
+				class="form-control"
+				formControlName="lastName"
+				placeholder="Type your last name">
+			<span 
+				*ngIf="contactForm.get('lastName').invalid && contactForm.get('lastName').touched" 
+				class="errorMessage">
+				This last name is required
+			</span>
+		</div>
+
+		<div class="formGroup">
+			<label for="id">ID NUMBER:</label>
+			<input
+				type="text"
+				class="form-control"
+				formControlName="id"
+				placeholder="Type your ID number">
+			<span 
+				*ngIf="contactForm.get('id').invalid && contactForm.get('id').touched" 
+				class="errorMessage">
+				This id number is required
+			</span>
+		</div>
+
+		<div class="formGroup">
+			<label for="phone">PHONE NUMBER:</label>
+			<input
+				type="text"
+				class="form-control"
+				formControlName="phone"
+				placeholder="Type your phone number">
+		</div>
+
+		<div class="formGroup">
+			<label for="email">EMAIL:</label>
+			<input
+				type="email"
+				class="form-control"
+				formControlName="email"
+				placeholder="Type your email">
+			<span 
+				*ngIf="contactForm.get('email').invalid && contactForm.get('email').touched" 
+				class="errorMessage">
+				This email is required
+			</span>
+		</div>
+
+		<div class="formGroup buttons">
+			<button class="btn secondary">CANCEL <i class="fas fa-times-circle"></i></button>
+			<button [disabled]="contactForm.invalid" class="btn primary">ADD CONTACT <i class="fas fa-plus-circle"></i></button>
+		</div>
+	</div>
+</form>
