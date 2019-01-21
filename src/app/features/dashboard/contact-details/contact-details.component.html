@@ -1,10 +1,10 @@
 <app-header [showButton]="false" [title]="'CONTACT DETAIL'"></app-header>
+<app-confirm-dialog></app-confirm-dialog>
 <div id="mainContainer">
   <div id="detailHeader">
     <i class="fas fa-user"></i> 
     <span style="color: #3CBE89; font-weight: bold">ID:</span> {{contact.id}}
   </div>
-
   <div id="detailButtonsContainer">
       <div (click)="onEdit()" style="color: #28789C"><i class="fas fa-user-edit"></i>EDIT CONTACT</div>
       <div (click)="onDelete()" style="color: #E1A6A6"><i class="fas fa-trash-alt"></i> DELETE CONTACT</div>

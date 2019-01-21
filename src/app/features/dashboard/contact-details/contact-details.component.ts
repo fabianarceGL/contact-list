@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ContactListService } from 'src/app/core/contact-list.service';
+import { ConfirmDialogService } from 'src/app/core/confirm-dialog.service';
 
 @Component({
   selector: 'app-contact-details',
@@ -14,7 +15,8 @@ export class ContactDetailsComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
               private router: Router,
-              private contactListService: ContactListService) { }
+              private contactListService: ContactListService,
+              private confirmDialogService: ConfirmDialogService) { }
 
   ngOnInit() {
     this.contactId = this.route.snapshot.paramMap.get("id");
@@ -30,7 +32,15 @@ export class ContactDetailsComponent implements OnInit {
     this.router.navigate(['/']);
   }
 
-  onDelete() {
+  onDelete(id: string) {
+    this.confirmDialogService.initConfirmDialog(
+      this.deleteContact.bind(this, id),
+      () => {
+        console.log("Contact not deleted");
+      })
+  }
+
+  deleteContact() {
     this.contactListService.deleteContact(this.contactId).subscribe(
       () => {
         this.router.navigate(['/']);

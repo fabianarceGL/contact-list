@@ -12,6 +12,7 @@ import { ContactComponent } from './features/dashboard/contact-list/contact/cont
 import { FirstUpperCaseLetterPipe } from './core/first-upper-case-letter.pipe';
 import { CreateContactComponent } from './features/dashboard/create-contact/create-contact.component';
 import { ContactDetailsComponent } from './features/dashboard/contact-details/contact-details.component';
+import { ConfirmDialogComponent } from './core/confirm-dialog/confirm-dialog.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ContactDetailsComponent } from './features/dashboard/contact-details/co
     ContactComponent,
     FirstUpperCaseLetterPipe,
     CreateContactComponent,
-    ContactDetailsComponent
+    ContactDetailsComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     BrowserModule,
