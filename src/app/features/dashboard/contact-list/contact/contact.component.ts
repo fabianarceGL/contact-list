@@ -12,7 +12,7 @@ export class ContactComponent {
 
   constructor(private contactListService: ContactListService) { }
 
-  deleteContact(id: number) {
+  deleteContact(id: string) {
     this.contactListService.deleteContact(id).subscribe(
       (contacts: Contact[]) => {
         this.contactListService.onContactsChanged.next(contacts);

@@ -24,7 +24,7 @@ export class ContactListService {
       catchError(error => { throw error }));
   };
 
-  deleteContact(id: Number) {
+  deleteContact(id: string) {
     return this.http.delete(`${this.url}/${id}`).pipe(
       map(() => {
         this.contacts = this.contacts.filter((contact: Contact) => contact.id !== id)
@@ -45,5 +45,10 @@ export class ContactListService {
         return this.contacts;
       }),
       catchError(error => { throw error }));;
+  }
+
+  updateContact(id: string, contact: Contact) {
+    return this.http.put(`${this.url}/${id}`, contact).pipe(
+      catchError(error => { throw error }));
   }
 }

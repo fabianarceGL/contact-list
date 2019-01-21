@@ -6,9 +6,9 @@
   </div>
 
   <div id="detailButtonsContainer">
-      <div style="color: #28789C"><i class="fas fa-user-edit"></i>EDIT CONTACT</div>
-      <div style="color: #E1A6A6"><i class="fas fa-trash-alt"></i> DELETE CONTACT</div>
-      <div style="color: #28789C"><i class="fas fa-arrow-circle-left"></i>GOT TO CONTACTS LIST</div>
+      <div (click)="onEdit()" style="color: #28789C"><i class="fas fa-user-edit"></i>EDIT CONTACT</div>
+      <div (click)="onDelete()" style="color: #E1A6A6"><i class="fas fa-trash-alt"></i> DELETE CONTACT</div>
+      <div (click)="onReturn()" style="color: #28789C"><i class="fas fa-arrow-circle-left"></i>GOT TO CONTACTS LIST</div>
     </div>
     <div id="detailContantContainer">
       <div>
