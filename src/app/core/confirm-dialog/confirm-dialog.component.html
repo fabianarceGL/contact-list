@@ -1,0 +1,8 @@
+<div class="confirmationDialogContainer" *ngIf="show">
+  <span class="title">{{title}}</span>
+  <span class="subTitle">{{subTitle}}</span>
+  <div class="buttons">
+			<button (click)="onCancel()" class="btn secondary">CANCEL <i class="fas fa-times-circle"></i></button>
+			<button (click)="onConfirm()"class="btn primary">DELETE <i class="fas fa-check-circle"></i></button>
+		</div>
+</div>
