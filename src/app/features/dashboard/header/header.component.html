@@ -3,7 +3,7 @@
     <img 
       [src]="'assets/black.png'"
       [style.height.px]="60"> 
-    CONTACTS 
+    {{title}}
   </span>
-  <button [routerLink]="[ '/createContact' ]" class="btn primary">ADD CONTACT <i class="fas fa-plus-circle"></i></button>
+  <button *ngIf="showButton" [routerLink]="[ '/createContact' ]" class="btn primary">ADD CONTACT <i class="fas fa-plus-circle"></i></button>
 </div>

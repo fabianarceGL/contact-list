@@ -33,12 +33,17 @@ export class ContactListService {
       catchError(error => { throw error }));
   };
 
-  getContact(id: number) {
+  getContact(id: string) {
     return this.http.get<Contact>(`${this.url}/${id}`).pipe(
       catchError(error => { throw error }));;
   }
 
   createContact(contact: Contact) {
-    return this.http.post(this.url, contact);
+    return this.http.post(this.url, contact).pipe(
+      map(() => {
+        this.contacts.push(contact);
+        return this.contacts;
+      }),
+      catchError(error => { throw error }));;
   }
 }
