@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ContactListService } from 'src/app/core/contact-list.service';
 import { ConfirmDialogService } from 'src/app/core/confirm-dialog.service';
+import { Contact } from 'src/app/core/models/contact';
 
 @Component({
   selector: 'app-contact-details',

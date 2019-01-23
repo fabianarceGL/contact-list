@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ContactListService } from 'src/app/core/contact-list.service';
 import { Subscription } from 'rxjs';
+import { Contact } from 'src/app/core/models/contact';
 
 @Component({
   selector: 'app-contact-list',

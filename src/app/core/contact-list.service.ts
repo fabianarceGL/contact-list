@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Subject } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
+import { Contact } from './models/contact';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,7 @@ import { map, catchError } from 'rxjs/operators';
 export class ContactListService {
 
   contacts: Contact[] = [];
-  onContactsChanged: Subject<Contact[]> = new Subject();
+  onContactsChanged: Subject<Contact[]> = new Subject<Contact[]>();
 
   private url: string = 'https://workshop-backend.herokuapp.com/contacts';
 

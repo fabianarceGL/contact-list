@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, Validators, FormBuilder, AbstractControl, ValidatorFn } from '@angular/forms';
 import { ContactListService } from 'src/app/core/contact-list.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Contact } from 'src/app/core/models/contact';
 
 @Component({
   selector: 'app-create-contact',

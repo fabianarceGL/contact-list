@@ -32,7 +32,6 @@ import { ConfirmDialogComponent } from './core/confirm-dialog/confirm-dialog.com
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

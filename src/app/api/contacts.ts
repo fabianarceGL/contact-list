@@ -1,3 +1,5 @@
+import { Contact } from '../core/models/contact';
+
 export const contacts: Contact[]  = [
     {
         id: 865245,

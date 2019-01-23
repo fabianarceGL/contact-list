@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { ContactListService } from 'src/app/core/contact-list.service';
 import { ConfirmDialogService } from 'src/app/core/confirm-dialog.service';
+import { Contact } from 'src/app/core/models/contact';
 
 @Component({
   selector: 'app-contact',
@@ -10,7 +11,6 @@ import { ConfirmDialogService } from 'src/app/core/confirm-dialog.service';
 export class ContactComponent {
 
   @Input() contact;
-  showDialog: boolean = false;
 
   constructor(private contactListService: ContactListService,
               private confirmDialogService: ConfirmDialogService) { }

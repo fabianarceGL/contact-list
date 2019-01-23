@@ -1,8 +1,8 @@
 import { FirstUpperCaseLetterPipe } from './first-upper-case-letter.pipe';
 
 describe('FirstUpperCaseLetterPipe', () => {
-  it('create an instance', () => {
+  it('should capitalize correctly', () => {
     const pipe = new FirstUpperCaseLetterPipe();
-    expect(pipe).toBeTruthy();
+    expect(pipe.transform('fAbiAn')).toBe('Fabian');
   });
 });
