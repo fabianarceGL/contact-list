@@ -10,8 +10,6 @@ import { ContactListService } from 'src/app/core/contact-list.service';
 import { Component, Input } from '@angular/core';
 import { By } from '@angular/platform-browser';
 import { ContactComponent } from './contact/contact.component';
-import { ConfirmDialogComponent } from 'src/app/core/confirm-dialog/confirm-dialog.component';
-import { constants } from 'os';
 
 describe('ContactListComponent', () => {
   let component: ContactListComponent;

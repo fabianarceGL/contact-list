@@ -12,7 +12,7 @@ export class ContactListService {
   contacts: Contact[] = [];
   onContactsChanged: Subject<Contact[]> = new Subject<Contact[]>();
 
-  private url: string = 'https://workshop-backend.herokuapp.com/contacts';
+  url: string = 'https://workshop-backend.herokuapp.com/contacts';
 
   constructor(private http: HttpClient) { }
 

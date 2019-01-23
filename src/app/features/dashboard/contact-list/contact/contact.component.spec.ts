@@ -4,6 +4,7 @@ import { FirstUpperCaseLetterPipe } from 'src/app/core/first-upper-case-letter.p
 import { RouterLinkDirective } from 'src/app/core/router-link.directive';
 import { ContactListService } from 'src/app/core/contact-list.service';
 import { contacts } from 'src/app/api/contacts';
+import { By } from '@angular/platform-browser';
 
 describe('ContactComponent', () => {
   let component: ContactComponent;
